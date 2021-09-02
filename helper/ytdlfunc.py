@@ -8,12 +8,10 @@ import asyncio
 def buttonmap(item):
     quality = item['format']
     if "audio" in quality:
-        return [InlineKeyboardButton(f"Q⚡️ {quality} 𝗗𝗟 𝗠𝘂𝘀𝗶𝗰 🔥 
-                                     {humanbytes(item['filesize'])}",
+        return [InlineKeyboardButton(f"Q⚡️ {quality} 𝗗𝗟 𝗠𝘂𝘀𝗶𝗰 🔥 {humanbytes(item['filesize'])}",
                                      callback_data=f"audio||{item['yturl']}")]
     else:
-        return [InlineKeyboardButton(f"Q⚡️ {quality} 𝗗𝗟 𝗩𝗶𝗱𝗲𝗼 🌷 
-                                     {humanbytes(item['filesize'])}",
+        return [InlineKeyboardButton(f"Q⚡️ {quality} 𝗗𝗟 𝗩𝗶𝗱𝗲𝗼 🌷 {humanbytes(item['filesize'])}",
                                      callback_data=f"video||{item['yturl']}")]
 
 # Return a array of Buttons
@@ -39,13 +37,13 @@ def extractYt(yturl):
 
 #  Need to work on progress
 
-# def downloadyt(url, fmid, custom_progress):
-#     ydl_opts = {
-#         'format': f"{fmid}+bestaudio",
-#         "outtmpl": "test+.%(ext)s",
-#         'noplaylist': True,
-#         'progress_hooks': [custom_progress],
-#     }
+ def downloadyt(url, fmid, custom_progress):
+     ydl_opts = {
+         'format': f"{fmid}+bestaudio",
+         "outtmpl": "test+.%(ext)s",
+         'noplaylist': True,
+         'progress_hooks': [custom_progress],
+     }
 #     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 #         ydl.download([url])
 
