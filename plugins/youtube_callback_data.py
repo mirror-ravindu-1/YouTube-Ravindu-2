@@ -25,11 +25,11 @@ async def catch_youtube_fmtid(c, m):
         print(media_type)
         if media_type == 'audio':
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
-                "සින්දුවක් විදියට🥰❤️", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("Document එකක් විදියට🥰❤️",
+                "𝗠𝘂𝘀𝗶𝗰 🥰🌷", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("𝗗𝗼𝗰𝘂𝗺𝗲𝗻𝘁 ☺️🔥",
                                                                                                     callback_data=f"docaudio||{format_id}||{yturl}")]])
         else:
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
-                "Video එකක් විදියට🥰❤️", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("Document එකක් විදියට🥰❤️",
+                "𝗩𝗶𝗱𝗲𝗼 🥰🌷", callback_data=f"{media_type}||{format_id}||{yturl}"), InlineKeyboardButton("𝗗𝗼𝗰𝘂𝗺𝗲𝗻𝘁 ☺️🔥",
                                                                                                     callback_data=f"docvideo||{format_id}||{yturl}")]])
 
         await m.edit_message_reply_markup(buttons)
@@ -74,7 +74,7 @@ async def catch_youtube_dldata(c, q):
     if not os.path.isdir(userdir):
         os.makedirs(userdir)
     await q.edit_message_reply_markup(
-        InlineKeyboardMarkup([[InlineKeyboardButton("Download වෙමින්...🥰❤️", callback_data="down")]]))
+        InlineKeyboardMarkup([[InlineKeyboardButton("<b>Downloading..🔥</b>", callback_data="down")]]))
     filepath = os.path.join(userdir, filext)
     # await q.edit_message_reply_markup([[InlineKeyboardButton("Processing..")]])
 
@@ -149,7 +149,7 @@ async def send_file(c, q, med, filename):
     print(med)
     try:
         await q.edit_message_reply_markup(
-            InlineKeyboardMarkup([[InlineKeyboardButton("Upload වෙමින්...🥰❤️", callback_data="down")]]))
+            InlineKeyboardMarkup([[InlineKeyboardButton("<b>Uploading...🔥🌷</b>", callback_data="down")]]))
         await c.send_chat_action(chat_id=q.message.chat.id, action="upload_document")
         # this one is not working
         await q.edit_message_media(media=med)
