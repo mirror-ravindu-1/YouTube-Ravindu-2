@@ -9,10 +9,10 @@ def buttonmap(item):
     quality = item['format']
     if "audio" in quality:
         return [InlineKeyboardButton(f"Q⚡️ {quality} 𝗗𝗟 𝗠𝘂𝘀𝗶𝗰 🔥 {humanbytes(item['filesize'])}",
-                                     callback_data=f"audio||{item['format_id']}||{item['yturl']}")]
+                                     callback_data=f"audio||{item['yturl']}")]
     else:
         return [InlineKeyboardButton(f"Q⚡️ {quality} 𝗗𝗟 𝗩𝗶𝗱𝗲𝗼 🌷 {humanbytes(item['filesize'])}",
-                                     callback_data=f"video||{item['format_id']}||{item['yturl']}")]
+                                     callback_data=f"video||{item['yturl']}")]
 
 # Return a array of Buttons
 def create_buttons(quailitylist):
@@ -29,7 +29,7 @@ def extractYt(yturl):
             # Filter dash video(without audio)
             if not "dash" in str(format['format']).lower():
                 qualityList.append(
-                {"format": format['format'], "filesize": format['filesize'], "format_id": format['format_id'],
+                {"format": format['format'], "filesize": format['filesize'],
                  "yturl": yturl})
 
         return r['title'], r['thumbnail'], qualityList
