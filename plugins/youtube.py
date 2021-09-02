@@ -45,7 +45,7 @@ async def ytdl(_, message):
             os.makedirs(output_directory)
         thumb_image_path = f"{output_directory}.jpg"
         im.save(thumb_image_path,"jpeg")
-        await message.reply_photo(thumb_image_path, caption=title "Video Title 🌷 :-", reply_markup=buttons)
+        await message.reply_photo(thumb_image_path, caption=title, reply_markup=buttons)
         await sentm.delete()
     except Exception as e:
         print(e)
