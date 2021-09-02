@@ -31,7 +31,7 @@ async def ytdl(_, message):
                                      timedelta(minutes=youtube_next_fetch)
 
     except Exception:
-        await message.reply_text("`Failed To Fetch Youtube Data... 😔 \nPossible Youtube Blocked server ip \n#error`")
+        await message.reply_text("`I was unable to Dowload your Video 🥺⚡️ \n#error`")
         return
     buttons = InlineKeyboardMarkup(list(create_buttons(formats)))
     sentm = await message.reply_text("<b>Your Link is Checking ☺️🌷\nMade by @Ravindu_Deshanz✨</b>")
