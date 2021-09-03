@@ -1,4 +1,3 @@
-import asyncio
 from pyrogram import Client, Filters, Message, StopPropagation, InlineKeyboardButton, InlineKeyboardMarkup
 
 
@@ -11,6 +10,5 @@ async def start(client, message):
         [InlineKeyboardButton("𝗢𝗽𝗲𝗻 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 ✨🔥", url="https://www.youtube.com/")]
     ])
     welcomed = f"𝗛𝗶...🖤🍂 <b>{message.from_user.first_name}</b>\n\n𝗦𝗲𝗻𝗱 𝗔𝗻𝘆 𝗬𝗼𝘂𝗧𝘂𝗯𝗲 𝗟𝗶𝗻𝗸 𝘁𝗼 𝗺𝗲 𝗮𝗻𝗱 𝗦𝗲𝗲 𝘁𝗵𝗲 𝗠𝗮𝗴𝗶𝗰 🖤\n\n𝗦𝗲𝗹𝗲𝗰𝘁 𝗧𝗵𝗲 𝗤𝘂𝗮𝗹𝗶𝘁𝘆 𝗮𝗻𝗱 𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝗶𝘁 🖤\n\n𝗣𝗿𝗲𝘀𝘀 <b>/help</b> 𝗳𝗼𝗿 𝗠𝗼𝗿𝗲 𝗢𝗽𝘁𝗶𝗼𝗻𝘀 🔥\n\n𝗣𝗿𝗼𝗷𝗲𝗰𝘁 𝗯𝘆 <b>@Ravindu_Deshanz</b>"
-    await message.reply_sticker("CAACAgUAAxkBAAEC2F5hMZje8bszhEbptLOGK7ZvkK9D-QACyQMAAufViVW5s1W9A1PIdCAE", reply_markup=joinButton)
     await message.reply_text(welcomed, reply_markup=joinButton)
     raise StopPropagation
